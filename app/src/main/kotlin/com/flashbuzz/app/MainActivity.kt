@@ -5,10 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.*
 import com.flashbuzz.app.models.GameState
+import com.flashbuzz.app.models.Player
 import com.flashbuzz.app.models.Question
 import com.flashbuzz.app.ui.RoleSelectionScreen
 import com.flashbuzz.app.ui.admin.AdminControlScreen
 import com.flashbuzz.app.ui.admin.AdminLobbyScreen
+import com.flashbuzz.app.ui.components.PodiumScreen
 import com.flashbuzz.app.ui.player.PlayerBuzzerScreen
 import com.flashbuzz.app.ui.player.PlayerJoinScreen
 import com.flashbuzz.app.ui.theme.FlashBuzzTheme
@@ -18,7 +20,8 @@ enum class Screen {
     ADMIN_LOBBY,
     ADMIN_CONTROL,
     PLAYER_JOIN,
-    PLAYER_BUZZER
+    PLAYER_BUZZER,
+    PODIUM
 }
 
 class MainActivity : ComponentActivity() {
@@ -26,7 +29,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             var currentScreen by remember { mutableStateOf(Screen.SELECTION) }
-            var roomCode by remember { mutableStateOf("TEST99") }
+            var roomCode by remember { mutableStateOf("BUZZ99") }
             
             FlashBuzzTheme {
                 when (currentScreen) {
@@ -36,14 +39,14 @@ class MainActivity : ComponentActivity() {
                     )
                     Screen.ADMIN_LOBBY -> AdminLobbyScreen(
                         roomCode = roomCode,
-                        playerCount = 0, // Placeholder
+                        playerCount = 3,
                         onStartQuiz = { currentScreen = Screen.ADMIN_CONTROL },
                         onImportQuiz = { /* Parse logic */ }
                     )
                     Screen.ADMIN_CONTROL -> AdminControlScreen(
-                        currentQuestion = Question("What is the capital of France?", 10),
-                        buzzerQueue = emptyList(),
-                        onNextQuestion = { /* Logic */ },
+                        currentQuestion = Question("What is the capital of Japan?", 15),
+                        buzzerQueue = listOf("Alice", "Bob"),
+                        onNextQuestion = { /* End for demo */ currentScreen = Screen.PODIUM },
                         onOpenBuzzer = { /* Logic */ },
                         onVerifyAnswer = { _, _ -> /* Logic */ }
                     )
@@ -56,9 +59,16 @@ class MainActivity : ComponentActivity() {
                     Screen.PLAYER_BUZZER -> PlayerBuzzerScreen(
                         gameState = GameState.QUESTION_OPEN,
                         queuePosition = 0,
-                        questionText = "What is the capital of France?",
-                        points = 10,
+                        questionText = "What is the capital of Japan?",
+                        points = 15,
                         onBuzz = { /* Logic */ }
+                    )
+                    Screen.PODIUM -> PodiumScreen(
+                        topPlayers = listOf(
+                            Player(id = "1", nickname = "Alice", score = 120),
+                            Player(id = "2", nickname = "Bob", score = 90),
+                            Player(id = "3", nickname = "Charlie", score = 80)
+                        )
                     )
                 }
             }

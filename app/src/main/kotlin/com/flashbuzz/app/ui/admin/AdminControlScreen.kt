@@ -7,8 +7,15 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.flashbuzz.app.models.Question
+import com.flashbuzz.app.ui.components.AnimatedBackground
+import com.flashbuzz.app.ui.components.GlassCard
+import com.flashbuzz.app.ui.theme.KahootBlue
+import com.flashbuzz.app.ui.theme.KahootGreen
+import com.flashbuzz.app.ui.theme.KahootPink
 
 @Composable
 fun AdminControlScreen(
@@ -18,56 +25,75 @@ fun AdminControlScreen(
     onOpenBuzzer: () -> Unit,
     onVerifyAnswer: (String, Boolean) -> Unit // PlayerID, isCorrect
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp)
-    ) {
-        Text("Admin Control", style = MaterialTheme.typography.headlineSmall)
+    Box(modifier = Modifier.fillMaxSize()) {
+        AnimatedBackground(modifier = Modifier.fillMaxSize())
         
-        Spacer(modifier = Modifier.height(16.dp))
-        
-        if (currentQuestion != null) {
-            Card(modifier = Modifier.fillMaxWidth()) {
-                Column(modifier = Modifier.padding(16.dp)) {
-                    Text("Current Question", style = MaterialTheme.typography.labelSmall)
-                    Text(currentQuestion.text, style = MaterialTheme.typography.titleLarge)
-                    Text("Points: ${currentQuestion.points}", style = MaterialTheme.typography.bodyMedium)
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(24.dp)
+        ) {
+            Text("Host Dashboard", style = MaterialTheme.typography.headlineMedium, color = Color.White)
+            
+            Spacer(modifier = Modifier.height(24.dp))
+            
+            if (currentQuestion != null) {
+                GlassCard(modifier = Modifier.fillMaxWidth()) {
+                    Column {
+                        Text("ACTIVE QUESTION", style = MaterialTheme.typography.labelSmall, color = Color.White.copy(alpha = 0.7f))
+                        Text(currentQuestion.text, style = MaterialTheme.typography.titleLarge, color = Color.White)
+                        Text("${currentQuestion.points} POINTS", fontWeight = FontWeight.Black, color = Color.White)
+                    }
                 }
             }
-        }
 
-        Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(24.dp))
 
-        Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceEvenly) {
-            Button(onClick = onOpenBuzzer) {
-                Text("OPEN BUZZER")
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                Button(
+                    onClick = onOpenBuzzer,
+                    modifier = Modifier.weight(1f).height(56.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = KahootPink)
+                ) {
+                    Text("OPEN BUZZER", fontWeight = FontWeight.Bold)
+                }
+                Button(
+                    onClick = onNextQuestion,
+                    modifier = Modifier.weight(1f).height(56.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = KahootBlue)
+                ) {
+                    Text("NEXT", fontWeight = FontWeight.Bold)
+                }
             }
-            Button(onClick = onNextQuestion) {
-                Text("NEXT QUESTION")
-            }
-        }
 
-        Spacer(modifier = Modifier.height(24.dp))
-        
-        Text("Buzzer Queue", style = MaterialTheme.typography.titleMedium)
-        
-        LazyColumn(modifier = Modifier.weight(1f)) {
-            itemsIndexed(buzzerQueue) { index, playerId ->
-                ListItem(
-                    headlineContent = { Text(playerId) },
-                    overlineContent = { Text("Position: #${index + 1}") },
-                    trailingContent = {
-                        Row {
-                            TextButton(onClick = { onVerifyAnswer(playerId, true) }) {
-                                Text("Correct", color = MaterialTheme.colorScheme.primary)
+            Spacer(modifier = Modifier.height(32.dp))
+            
+            Text("Live Queue", style = MaterialTheme.typography.titleMedium, color = Color.White)
+            
+            LazyColumn(
+                modifier = Modifier.weight(1f),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                itemsIndexed(buzzerQueue) { index, playerId ->
+                    GlassCard(modifier = Modifier.fillMaxWidth()) {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text(
+                                "#${index + 1}",
+                                style = MaterialTheme.typography.headlineSmall,
+                                color = Color.White,
+                                modifier = Modifier.padding(end = 16.dp)
+                            )
+                            Text(playerId, style = MaterialTheme.typography.titleMedium, color = Color.White, modifier = Modifier.weight(1f))
+                            
+                            IconButton(onClick = { onVerifyAnswer(playerId, true) }) {
+                                Text("✅", fontSize = 20.sp)
                             }
-                            TextButton(onClick = { onVerifyAnswer(playerId, false) }) {
-                                Text("Wrong", color = MaterialTheme.colorScheme.error)
+                            IconButton(onClick = { onVerifyAnswer(playerId, false) }) {
+                                Text("❌", fontSize = 20.sp)
                             }
                         }
                     }
-                )
+                }
             }
         }
     }

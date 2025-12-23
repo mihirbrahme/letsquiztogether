@@ -1,22 +1,27 @@
 package com.flashbuzz.app.ui.player
 
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.*
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.flashbuzz.app.models.GameState
+import com.flashbuzz.app.ui.components.AnimatedBackground
+import com.flashbuzz.app.ui.theme.KahootGreen
+import com.flashbuzz.app.ui.theme.KahootPink
 
 @Composable
 fun PlayerBuzzerScreen(
@@ -26,70 +31,92 @@ fun PlayerBuzzerScreen(
     points: Int,
     onBuzz: () -> Unit
 ) {
+    val haptic = LocalHapticFeedback.current
+    
     val buzzerColor by animateColorAsState(
         targetValue = when {
-            queuePosition > 0 -> Color(0xFF4CAF50) // Green (Locked)
-            gameState == GameState.QUESTION_OPEN -> Color(0xFFF44336) // Red (Active)
+            queuePosition > 0 -> KahootGreen // Green (Locked)
+            gameState == GameState.QUESTION_OPEN -> KahootPink // Red (Active)
             else -> Color(0xFF9E9E9E) // Grey (Disabled)
         },
         label = "buzzerColor"
     )
 
-    val labelText = when {
-        queuePosition > 0 -> "BUZZED!\nPosition #$queuePosition"
-        gameState == GameState.QUESTION_OPEN -> "TAP TO\nBUZZ!"
-        else -> "WAIT FOR\nHOST..."
+    // Trigger haptic when buzzer opens
+    LaunchedEffect(gameState) {
+        if (gameState == GameState.QUESTION_OPEN) {
+            haptic.performHapticFeedback(HapticFeedbackType.LongPress)
+        }
     }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        // Question Info
-        Text(
-            text = "Question: $questionText",
-            style = MaterialTheme.typography.headlineSmall,
-            modifier = Modifier.padding(top = 16.dp)
-        )
-        Text(
-            text = "$points Points",
-            style = MaterialTheme.typography.labelLarge,
-            color = MaterialTheme.colorScheme.secondary
-        )
+    val labelText = when {
+        queuePosition > 0 -> "Buzzed!\n#$queuePosition"
+        gameState == GameState.QUESTION_OPEN -> "GO!"
+        else -> "Stand By"
+    }
 
-        Spacer(modifier = Modifier.weight(1f))
-
-        // Large Circular Buzzer
-        Box(
+    Box(modifier = Modifier.fillMaxSize()) {
+        AnimatedBackground(modifier = Modifier.fillMaxSize())
+        
+        Column(
             modifier = Modifier
-                .size(280.dp)
-                .clip(CircleShape)
-                .background(buzzerColor)
-                .clickable(enabled = gameState == GameState.QUESTION_OPEN && queuePosition == 0) {
-                    onBuzz()
-                },
-            contentAlignment = Alignment.Center
+                .fillMaxSize()
+                .padding(24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
+            Spacer(modifier = Modifier.height(32.dp))
+            
             Text(
-                text = labelText,
+                text = "Question",
+                style = MaterialTheme.typography.labelMedium,
+                color = Color.White.copy(alpha = 0.7f)
+            )
+            Text(
+                text = questionText,
+                style = MaterialTheme.typography.headlineMedium,
                 color = Color.White,
-                fontSize = 24.sp,
-                fontWeight = FontWeight.Bold,
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center
             )
-        }
-
-        Spacer(modifier = Modifier.weight(1f))
-        
-        // Progress Info
-        if (queuePosition > 0) {
             Text(
-                "Stand by for host verification",
-                style = MaterialTheme.typography.bodyMedium,
-                modifier = Modifier.padding(bottom = 32.dp)
+                text = "$points PTS",
+                style = MaterialTheme.typography.displaySmall,
+                color = Color.White,
+                fontWeight = FontWeight.Black
             )
+
+            Spacer(modifier = Modifier.weight(1f))
+
+            // Large Circular Buzzer with Pulse Animation placeholder
+            Box(
+                modifier = Modifier
+                    .size(280.dp)
+                    .clip(CircleShape)
+                    .background(buzzerColor)
+                    .clickable(enabled = gameState == GameState.QUESTION_OPEN && queuePosition == 0) {
+                        haptic.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                        onBuzz()
+                    },
+                contentAlignment = Alignment.Center
+            ) {
+                Text(
+                    text = labelText,
+                    color = Color.White,
+                    fontSize = 32.sp,
+                    fontWeight = FontWeight.Black,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                )
+            }
+
+            Spacer(modifier = Modifier.weight(1f))
+            
+            if (queuePosition > 0) {
+                Text(
+                    "Waiting for host...",
+                    color = Color.White.copy(alpha = 0.8f),
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+            Spacer(modifier = Modifier.height(48.dp))
         }
     }
 }
