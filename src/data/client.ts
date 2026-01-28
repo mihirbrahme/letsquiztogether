@@ -25,7 +25,7 @@ const getAdminToken = () => {
     return localStorage.getItem('adminToken') || import.meta.env.VITE_ADMIN_TOKEN || '';
 };
 
-const withAdminHeaders = () => {
+const getAdminHeaders = (): Record<string, string> => {
     const token = getAdminToken();
     return token ? { 'x-admin-token': token } : {};
 };
@@ -49,9 +49,10 @@ export const api = {
 
     saveQuizData: async (payload: DBContent): Promise<boolean> => {
         try {
+            const headers: Record<string, string> = { 'Content-Type': 'application/json', ...getAdminHeaders() };
             const res = await fetch(API_URL, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', ...withAdminHeaders() },
+                headers,
                 body: JSON.stringify(payload),
             });
             return res.ok;
@@ -75,9 +76,10 @@ export const api = {
 
     saveSessions: async (sessions: unknown[]): Promise<boolean> => {
         try {
+            const headers: Record<string, string> = { 'Content-Type': 'application/json', ...getAdminHeaders() };
             const res = await fetch(SESSIONS_URL, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json', ...withAdminHeaders() },
+                headers,
                 body: JSON.stringify({ sessions }),
             });
             return res.ok;
@@ -109,7 +111,7 @@ export const api = {
             const res = await fetch(`${API_BASE_URL}/api/upload`, {
                 method: 'POST',
                 body: formData,
-                headers: { ...withAdminHeaders() },
+                headers: getAdminHeaders(),
             });
             if (!res.ok) throw new Error('Upload failed');
             const data = await res.json();
