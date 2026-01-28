@@ -28,7 +28,10 @@ export function useSessions() {
 
     const persist = async (next: Session[]) => {
         setSessions(next);
-        await api.saveSessions(next);
+        const ok = await api.saveSessions(next);
+        if (!ok) {
+            throw new Error('Failed to save sessions');
+        }
     };
 
     const createSession = async (quizId: string, title: string, participantNames: string[]) => {

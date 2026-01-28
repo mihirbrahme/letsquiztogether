@@ -277,7 +277,7 @@ export const Dashboard = () => {
                     const activeSession = sessions.find((session) => session.quizId === quiz.id && session.status === 'active');
                     const isSessionSetupOpen = sessionSetupQuizId === quiz.id;
                     return (
-                    <Card key={quiz.id} variant="interactive" className="group flex flex-col justify-between h-52 p-6 relative overflow-hidden">
+                    <Card key={quiz.id} variant="interactive" className="group flex flex-col justify-between p-6 relative">
 
                         <div className="absolute top-0 right-0 p-4 opacity-0 group-hover:opacity-100 transition-opacity">
                             <button
@@ -394,9 +394,13 @@ export const Dashboard = () => {
                                                 alert('Please add between 2 and 20 participants.');
                                                 return;
                                             }
-                                            const session = await createSession(quiz.id, sessionTitle || `${quiz.title} Session`, names);
-                                            setSessionSetupQuizId(null);
-                                            navigate(`/session/${session.id}`);
+                                            try {
+                                                const session = await createSession(quiz.id, sessionTitle || `${quiz.title} Session`, names);
+                                                setSessionSetupQuizId(null);
+                                                navigate(`/session/${session.id}`);
+                                            } catch (err) {
+                                                alert('Failed to create session. Please check admin access and try again.');
+                                            }
                                         }}
                                     >
                                         Create Session
