@@ -11,7 +11,7 @@ export const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_KEY, {
     auth: { persistSession: false },
 });
 
-export const getAdminToken = () => process.env.ADMIN_TOKEN || process.env.VITE_ADMIN_TOKEN || '';
+export const getAdminToken = () => process.env.ADMIN_TOKEN || '';
 
 export const requireAdmin = (req, res) => {
     const token = req.headers['x-admin-token'];

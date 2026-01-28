@@ -22,7 +22,7 @@ const DEFAULT_DB: DBContent = { version: 1, quizzes: [], library: [] };
 
 const getAdminToken = () => {
     if (typeof window === 'undefined') return '';
-    return localStorage.getItem('adminToken') || import.meta.env.VITE_ADMIN_TOKEN || '';
+    return localStorage.getItem('adminToken') || '';
 };
 
 const getAdminHeaders = (): Record<string, string> => {

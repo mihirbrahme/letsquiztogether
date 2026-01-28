@@ -9,7 +9,6 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     const [searchParams] = useSearchParams();
     const [adminToken, setAdminToken] = useState('');
     const [inputToken, setInputToken] = useState('');
-    const defaultToken = import.meta.env.VITE_ADMIN_TOKEN || '';
 
     useEffect(() => {
         const urlToken = searchParams.get('admin');
@@ -22,8 +21,8 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     useEffect(() => {
         if (typeof window === 'undefined') return;
         const stored = localStorage.getItem('adminToken') || '';
-        setAdminToken(stored || defaultToken);
-    }, [defaultToken]);
+        setAdminToken(stored);
+    }, []);
 
     const hasAccess = useMemo(() => Boolean(adminToken), [adminToken]);
 
