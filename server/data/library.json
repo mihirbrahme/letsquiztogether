@@ -1,0 +1,14 @@
+[
+  {
+    "id": "fw6606zzu",
+    "createdAt": "2026-01-22T09:58:56.433Z",
+    "updatedAt": "2026-01-22T09:58:56.433Z",
+    "text": "Who painted the Mona Lisa?",
+    "answer": "Leonardo da Vinci",
+    "type": "TEXT",
+    "tags": [
+      "art",
+      "history"
+    ]
+  }
+]

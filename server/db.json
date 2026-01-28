@@ -1,0 +1,59 @@
+{
+  "quizzes": [
+    {
+      "id": "jq1v8oke7",
+      "title": "23rd January - Quiz Night",
+      "description": "New Quiz Description",
+      "createdAt": "2026-01-22T09:31:22.871Z",
+      "updatedAt": "2026-01-22T09:50:53.783Z",
+      "rounds": [
+        {
+          "id": "qwhmb2og5",
+          "title": "Dus Ka Dum",
+          "type": "LINEAR",
+          "order": 0,
+          "questions": [
+            {
+              "id": "c823cj8ki",
+              "text": "Population of Pune City as per 2011 census.",
+              "type": "TEXT",
+              "answer": "31,24,458",
+              "points": 10
+            },
+            {
+              "id": "sz8ir2rjb",
+              "text": "",
+              "type": "TEXT",
+              "answer": "",
+              "points": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "83ecv0qil",
+      "title": "QA Smoke Test Quiz",
+      "description": "New Quiz Description",
+      "createdAt": "2026-01-22T09:54:06.332Z",
+      "updatedAt": "2026-01-22T09:54:41.824Z",
+      "rounds": [
+        {
+          "id": "yn7ztkt81",
+          "title": "New Round",
+          "type": "LINEAR",
+          "order": 0,
+          "questions": [
+            {
+              "id": "q5qrrtbty",
+              "text": "What is the capital of France?",
+              "type": "TEXT",
+              "answer": "Paris",
+              "points": 10
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,25 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+
+  ::selection {
+    background: #fb7185;
+    color: white;
+  }
+}
+
+@layer base {
   body {
     @apply bg-gray-50 text-gray-900 font-sans antialiased;
   }

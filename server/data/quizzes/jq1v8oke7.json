@@ -1,0 +1,742 @@
+{
+  "id": "jq1v8oke7",
+  "title": "Lets Quiz Together - January Quiz Night",
+  "description": "It’s time to settle the debate: Who is the smartest person in the room?",
+  "createdAt": "2026-01-22T09:31:22.871Z",
+  "updatedAt": "2026-01-23T15:07:02.567Z",
+  "rounds": [
+    {
+      "id": "4hvc5xjli",
+      "title": "Lights, Camera, Action!",
+      "type": "LINEAR",
+      "order": 0,
+      "questions": [
+        {
+          "id": "grkqn1ned",
+          "text": "In this film, I appear as myself. I give the protagonist Vikram (Farhan Akhtar) a piece of advice at a party: 'Never forget the people who knew you when you were nobody.' Who am I?",
+          "type": "TEXT",
+          "answer": " Shah Rukh Khan (playing himself)",
+          "points": 10
+        },
+        {
+          "id": "av468v84i",
+          "text": "I am the object that has no dialogue but has a social media following. I am extremely posh and traveled across Spain with three men and was treated better than some of the humans on the trip. What am I?",
+          "type": "TEXT",
+          "answer": "'Bagwati' the Hermès bag",
+          "points": 10
+        },
+        {
+          "id": "0tm0xmofu",
+          "text": "In the movie Kahaani (2012), everyone is looking for 'Arnab Bagchi.' But I am the cold-blooded contract killer who disguises myself as an insurance agent to eliminate people in broad daylight. Who am I?",
+          "type": "TEXT",
+          "answer": "Bob Biswas",
+          "points": 10
+        },
+        {
+          "id": "n7ijojpml",
+          "text": "I am the fruit that Sultan (Pankaj Tripathi) is seen purchasing right before he is killed in a cinematic encounter. What am I?",
+          "type": "TEXT",
+          "answer": "Kathal / Jackfruit",
+          "points": 10
+        },
+        {
+          "id": "ivqe0jqlv",
+          "text": "I am the only member of the Mehra family who isn't a hypocrite. I spent the entire cruise observing the humans' drama, but what makes me truly special is that while I am a Bullmastiff, I speak with the voice of a superstar known as 'Mr. Perfectionist.' Who am I?",
+          "type": "TEXT",
+          "answer": "Pluto Mehra",
+          "points": 10
+        },
+        {
+          "id": "djlekzxue",
+          "text": "In the 2018 film Sanju, I am the person who appears next to Ranbir Kapoor in the end-credits song 'Baba Bolta Hain Bas Ho Gaya' to poke fun at the media. Who am I?",
+          "type": "TEXT",
+          "answer": "Sanjay Dutt ",
+          "points": 10
+        },
+        {
+          "id": "lpnj28z9r",
+          "text": "I am the two specific dates (Day & Month) that the Salgaonkar family allegedly spent attending a Satsang in Panjim. Every year on these dates, social media is flooded with memes about this movie. What are the dates?",
+          "type": "TEXT",
+          "answer": "2nd October and 3rd October",
+          "points": 10
+        },
+        {
+          "id": "mxx3c7lpo",
+          "text": "The entire plot of 'Golmaal Returns' is driven by Gopal's lie to his wife. He claims he was stuck on a yacht with a fictional friend to hide where he actually was. What was the name of this imaginary friend?",
+          "type": "TEXT",
+          "answer": "Anthony Gonsalves",
+          "points": 10
+        },
+        {
+          "id": "cj9trhydp",
+          "text": "When Geet misses her train and is stranded in Ratlam, Aditya takes her to a very sketchy hotel for the night. What is the hilariously inappropriate name of this hotel?",
+          "type": "TEXT",
+          "answer": "Hotel Decent",
+          "points": 10
+        },
+        {
+          "id": "k3wc4zh7b",
+          "text": "The entire confusion in the movie Hera Pheri starts because Babu Bhaiya keeps getting calls meant for 'Devi Prasad.' What is the name of the business that these callers are actually trying to reach?",
+          "type": "TEXT",
+          "answer": "Star Fisheries",
+          "points": 10
+        },
+        {
+          "id": "za1jhqote",
+          "text": "In the movie Stree, the men of Chanderi town stay safe at night by writing a specific 4-word Hindi phrase on the walls of their houses with red paint. What is the phrase?",
+          "type": "TEXT",
+          "answer": "O Stree Kal Aana",
+          "points": 10
+        },
+        {
+          "id": "motaxdczt",
+          "text": "Little Anjali goes to a summer camp in Shimla to execute her plan of reuniting Rahul and Anjali. What was the name of this summer camp?",
+          "type": "TEXT",
+          "answer": "Camp Sunshine",
+          "points": 10
+        }
+      ],
+      "rules": "Format: Buzzer Round.\n\nThe Task: Answer the questions about Hindi cinema characters.\n\nScoring:\n\n+10 Points: Correct Answer.\n\n-5 Points: Wrong Answer.\n\nPass: Yes, passes to the next team if the buzzer answer is wrong (Next team gets chance to buzz, no negative on pass).",
+      "coverImageUrl": "/uploads/bollywood-1769156872081-198406217.webp"
+    },
+    {
+      "id": "6ub9drnzz",
+      "title": "Jumbled Journey",
+      "type": "LINEAR",
+      "order": 1,
+      "questions": [
+        {
+          "id": "adcxj42ju",
+          "text": "MAIL",
+          "type": "TEXT",
+          "answer": "LIMA",
+          "points": 10
+        },
+        {
+          "id": "1o2sj6mg0",
+          "text": "I RAP S",
+          "type": "TEXT",
+          "answer": "PARIS",
+          "points": 10
+        },
+        {
+          "id": "p9fqjeiue",
+          "text": "CORIA",
+          "type": "TEXT",
+          "answer": "CAIRO",
+          "points": 10
+        },
+        {
+          "id": "b8tdivo16",
+          "text": "PLANES",
+          "type": "TEXT",
+          "answer": "NAPLES",
+          "points": 10
+        },
+        {
+          "id": "qg9hefc03",
+          "text": "SALVE SAG",
+          "type": "TEXT",
+          "answer": "LAS VEGAS",
+          "points": 10
+        },
+        {
+          "id": "vz52guohp",
+          "text": "RX FOOD",
+          "type": "TEXT",
+          "answer": "OXFORD",
+          "points": 10
+        },
+        {
+          "id": "52r8fq24z",
+          "text": "DID ARM",
+          "type": "TEXT",
+          "answer": "MADRID",
+          "points": 10
+        },
+        {
+          "id": "g7d82cs7n",
+          "text": "HR PET",
+          "type": "TEXT",
+          "answer": "PERTH",
+          "points": 10
+        }
+      ],
+      "rules": "Format: Buzzer Round.\n\nThe Task: Unscramble the letters shown on screen to reveal a Place (City).\n\nScoring:\n\n+10 Points: Correct Answer.\n\n-5 Points: Wrong Answer.\n\nPass: Yes, passes to the next team if the buzzer answer is wrong (Next team gets chance to buzz, no negative on pass).",
+      "coverImageUrl": "/uploads/anagrams-1769156971297-28597828.webp"
+    },
+    {
+      "id": "eyomzpjd2",
+      "title": "Close Enough?",
+      "type": "LINEAR",
+      "order": 2,
+      "questions": [
+        {
+          "id": "jlyye8c3a",
+          "text": "MTV Roadies started the reality TV craze in India. In which year did Season 1 air?",
+          "type": "IMAGE",
+          "answer": "2003",
+          "points": 10,
+          "mediaUrl": "/uploads/MTV_Roadies_official_logo-1769144657345-924962160.jpg"
+        },
+        {
+          "id": "0q1qlqarx",
+          "text": "We all know the bald, angry judge Raghu Ram. He actually has an identical twin brother who also appeared on the show as a producer/judge. What is his brother's name?",
+          "type": "TEXT",
+          "answer": "Rajiv (Rajiv Lakshman)",
+          "points": 10
+        },
+        {
+          "id": "x7jc75d4a",
+          "text": "We all love Kayani Bakery on East Street. In which year was Kayani Bakery established?",
+          "type": "IMAGE",
+          "answer": "1955",
+          "points": 10,
+          "mediaUrl": "/uploads/kayani-1769144770843-380465536.jpg"
+        },
+        {
+          "id": "g12sviurh",
+          "text": "Where did the Shrewsbury biscuits get their name from ?",
+          "type": "TEXT",
+          "answer": "Shrewsbury town, UK - where the biscuits and cake supposedly originated.",
+          "points": 10,
+          "notes": ""
+        },
+        {
+          "id": "pf4opc8bh",
+          "text": "Yahoo Messenger was a staple of our teenage years, but it eventually died out. In which year did Yahoo officially shut down the Yahoo Messenger servers completely?",
+          "type": "IMAGE",
+          "answer": "2018 (July 17th).",
+          "points": 10,
+          "mediaUrl": "/uploads/yahoomsg-1769144808473-258254148.jpg"
+        },
+        {
+          "id": "bo2p5jo93",
+          "text": "In Yahoo Messenger, if your friend wasn't replying, you could hit a button that made a loud noise and caused their entire chat window to shake violently. What was this feature called?",
+          "type": "TEXT",
+          "answer": "BUZZ.",
+          "points": 10
+        },
+        {
+          "id": "9hg2stn8n",
+          "text": "Harry Potter and the Order of the Phoenix is the longest book in the series. In the standard UK/Indian paperback edition, how many pages is it?",
+          "type": "IMAGE",
+          "answer": "766 pages",
+          "points": 10,
+          "mediaUrl": "/uploads/Harry_Potter_and_the_Order_of_the_Phoenix-1769144852188-807180635.jpg"
+        },
+        {
+          "id": "txnld8ypt",
+          "text": "In the movie 'Goblet of Fire', Neville Longbottom gives Harry the Gillyweed for the underwater task. However, in the book, a different character steals it from Snape’s office and gives it to Harry. Who was it?",
+          "type": "TEXT",
+          "answer": "Dobby",
+          "points": 10
+        }
+      ],
+      "rules": "Format: Slate Round. Teams write their estimated number on the slate.\n\nThe Goal: The team closest to the actual number wins the points.\n\nThe Follow-Up: The winning team gets an exclusive Follow-Up Question on the same topic.\n\nScoring:\n\n+10 Points: For the closest estimation.\n\n+10 Points: For answering the follow-up correctly.\n\n+5 Points (Bonus): If the winning team misses the follow-up, it passes to the other team for a bonus attempt.\n\nNegative Marking: None.",
+      "coverImageUrl": "/uploads/darts-1769156182360-944527009.jpg"
+    },
+    {
+      "id": "wb7ssravv",
+      "title": "Strip the Script",
+      "type": "LINEAR",
+      "order": 3,
+      "questions": [
+        {
+          "id": "1juaogw2x",
+          "text": "A man spends his vacation pretending to be a fictional character to avoid his real identity as a standardized corporate employee, only to get dumped later because his real-life personality consists entirely of spreadsheets and scheduled habits. After a public meltdown and a confusing heart-to-heart with an auto-rickshaw driver, he realizes he has been miscast as an engineer his entire life. He eventually settles his mid-life crisis by moving back home to pursue a career in theatrical storytelling and professional daydreaming.",
+          "type": "TEXT",
+          "answer": "Tamasha",
+          "points": 10
+        },
+        {
+          "id": "5wnld7e7z",
+          "text": "A wealthy law student returns from abroad only to spend his entire savings on fermented grape juice because his parents didn't like his childhood neighbor. Instead of moving on, he spends his nights staring at a stationary lamp and wandering into the house of a professional dancer who just wants him to stop drinking. His health insurance definitely doesn't cover his lifestyle, leading to a final scene where he collapses outside a gate just to deliver a belated apology.",
+          "type": "TEXT",
+          "answer": "Devdas",
+          "points": 10
+        },
+        {
+          "id": "z0grmn209",
+          "text": "A local businessman uses his Cable TV subscription to binge-watch movies until he becomes an expert in waste management and foundational engineering. After a stressful family encounter, he organizes a very specific weekend trip involving stamped receipts, spiritual seminars, and plates of Pav Bhaji to create a trail of his existence. He spends his time repeatedly reminding his neighbors about the exact date of his trip while hiding his latest home improvement project beneath a Police Station.",
+          "type": "TEXT",
+          "answer": "Drishyam",
+          "points": 10
+        },
+        {
+          "id": "9y9jsvub3",
+          "text": "An ambitious videographer with a severe case of wanderlust spends his youth ghosting his social circle to take pictures of mountains and cityscapes for a living. He eventually returns to his hometown for a lavish wedding, only to realize that his former classmate has undergone a complete eyewear makeover and no longer enjoys hiking alone Key ",
+          "type": "TEXT",
+          "answer": "Yeh Jawani Hai Deewani",
+          "points": 10
+        },
+        {
+          "id": "f4m4n8tlo",
+          "text": "A fluffy white pompous dog watches as two families spend several months organizing elaborate indoor sports matches and catering menus. After a tragic household accident, a man almost marries his sister-in-law to solve a childcare vacancy. At the last minute, the family pet intervenes with a letter and a locket, ensuring the younger brother gets the girl instead of becoming a permanent babysitter.",
+          "type": "TEXT",
+          "answer": "Hum Aapke Hain Kaun",
+          "points": 10
+        },
+        {
+          "id": "7ahbasex8",
+          "text": "A frustrated landlord with failing eyesight spends most of his time mediating arguments between a high-maintenance tenant who won't pay rent and a jobless man who forces his way into the house. Their domestic boredom is interrupted by a wrong number meant for a fishery business, which the trio decides to treat as a high-stakes customer service opportunity.",
+          "type": "TEXT",
+          "answer": "Hera Pheri",
+          "points": 10
+        },
+        {
+          "id": "ul60piljv",
+          "text": "An insomniac police officer spends his nights driving around the city to avoid dealing with his unhappy home life and a persistent grief over a family tragedy. He becomes obsessed with a high-profile car accident involving a famous actor, which leads him to a series of interviews with a local girl who is into the business of selling pleasure who seems to know more about the city's navigation than he does. After a lot of staring at dark water and reviewing police files, he realizes his primary witness doesn't actually have a registered address because she has technically been missing for years. ",
+          "type": "TEXT",
+          "answer": "Talaash",
+          "points": 10
+        },
+        {
+          "id": "dndccxmo0",
+          "text": "A tribal man travels to the city to find a child who was traded for a few coins, only to become best friends with a high-achieving government employee obsessed with gym records. Their friendship is tested over conflicting colonial administrative policies, leading to a chaotic confrontation involving a mobile zoo and a projectile motorcycle. They eventually settle their differences through a synchronized folk dance competition and a very intense archery session key.",
+          "type": "TEXT",
+          "answer": "RRR",
+          "points": 10
+        }
+      ],
+      "rules": "Format: Buzzer Round.\n\nThe Task: Guess the famous movie from its Boring Description.\n\nScoring:\n\n+10 Points: Correct Movie.\n\n-5 Points: Incorrect.\n\nPass: Yes, passes to the next team if the buzzer answer is wrong (Next team gets chance to buzz, no negative on pass).",
+      "coverImageUrl": "/uploads/mundane-1769157197168-781019007.jpg"
+    },
+    {
+      "id": "szixeub50",
+      "title": "The Rate Race",
+      "type": "LINEAR",
+      "order": 4,
+      "questions": [
+        {
+          "id": "bzfjasgzc",
+          "text": "Today's gold price is 1,55,440 for 10g. What was the price of 10g of Gold (24k) in 1994?\n\nRange: 400",
+          "type": "IMAGE",
+          "answer": "4,598",
+          "points": 10,
+          "mediaUrl": "/uploads/gold-1769146974311-292885916.jpg"
+        },
+        {
+          "id": "st8dmd60i",
+          "text": "The price of 1 Liter of Petrol in Pune is approximately ₹104. What was the price of 1 Liter of Petrol in 1994?\n\nRange: 3",
+          "type": "IMAGE",
+          "answer": "Rs. 16/liter",
+          "points": 10,
+          "mediaUrl": "/uploads/petrolprice-1-1769146968597-804322177.avif"
+        },
+        {
+          "id": "tw9a997uz",
+          "text": "1 US Dollar is trading at approximately ₹91.60. What was the exchange rate for 1 US Dollar in 1994?\n\nRange: 4",
+          "type": "IMAGE",
+          "answer": "Rs. 31.3",
+          "points": 10,
+          "mediaUrl": "/uploads/usd-1769146962935-643069657.webp"
+        },
+        {
+          "id": "ol546hdrn",
+          "text": "What was the cost of the Maruti Esteem in 1995?\n\nRange: 50k",
+          "type": "IMAGE",
+          "answer": "Rs. 4.60 Lakhs",
+          "points": 10,
+          "notes": "",
+          "mediaUrl": "/uploads/esteem-car-e1506021356195-1769146957317-101568545.jpg"
+        },
+        {
+          "id": "k0jgfazow",
+          "text": "In 1994, a 100g pack of Parle-G cost ₹4. How much does a ₹5 pack of Parle-G weigh today (Jan 2026)?\n\nRange: 10",
+          "type": "IMAGE",
+          "answer": "55 gms",
+          "points": 10,
+          "mediaUrl": "/uploads/glucose-biscuit-799g-parle-g-baazwsh-174862-1769146947400-981601764.webp"
+        },
+        {
+          "id": "xeccnrbxt",
+          "text": "A standard 100g bar of Lux Soap costs ₹35 to ₹40 today. What was the price of Lux soap bar in 1995?\n\nRange: 2 ",
+          "type": "IMAGE",
+          "answer": "Rs. 6",
+          "points": 10,
+          "mediaUrl": "/uploads/lux-1769146940695-341754139.jpg"
+        },
+        {
+          "id": "fjyw4t7q6",
+          "text": "India Post on September 2, 2002, launched the Meghdoot postcard at a price of 25 paise. What is its price today?\n\nRange: 10p",
+          "type": "IMAGE",
+          "answer": "25 paise.",
+          "points": 10,
+          "mediaUrl": "/uploads/meghdoot-1769146933663-773148668.jpg"
+        },
+        {
+          "id": "apwzwgag0",
+          "text": "Coca-cola in 2004 launched chhota coke at Rs.5 for 200ml. What does coca cola (250ml) cost today?\n\nRange: 2",
+          "type": "IMAGE",
+          "answer": "Rs. 20",
+          "points": 10,
+          "mediaUrl": "/uploads/250ml-coca-cola-1769146922154-71053936.jpg"
+        }
+      ],
+      "rules": "Format: Slate Round. Guess the price of the item shown (Historical or Current).\n\nThe Goal: Your guess must fall within the Allowed Margin.\n\nScoring:\n\n+10 Points: For a correct guess within the range.\n\n0 Points: If outside the range.\n\nNegative Marking: None.",
+      "coverImageUrl": "/uploads/oldnote-1769156246823-925001285.jpg"
+    },
+    {
+      "id": "icy7niub4",
+      "title": "Bol Bachchan",
+      "type": "LINEAR",
+      "order": 5,
+      "questions": [
+        {
+          "id": "d779h1ydk",
+          "text": "Thappad se darr nahi lagta sahab, pyaar se lagta hai",
+          "type": "TEXT",
+          "answer": "Rajjo/Sonakshi Sinha - Dabangg",
+          "points": 10
+        },
+        {
+          "id": "fr4gg896d",
+          "text": "22 tak padhai, 25 pe naukri, 26 pe chokri, 30 pe bachche, 60 pe retirement; aur phir maut ka intezaar; dhat aaisi ghisi piti life thodi jeena chahta hoon",
+          "type": "TEXT",
+          "answer": "Bunny/Ranbir Kapoor - YJHD",
+          "points": 10
+        },
+        {
+          "id": "ncn6avia4",
+          "text": "Filmein sirf teen cheezo ke wajah se chalti hai ... entertainment, entertainment, entertainment ... aur main entertainment hoon",
+          "type": "TEXT",
+          "answer": "Silk Smita/Vidya Balan - The Dirty Picture",
+          "points": 10
+        },
+        {
+          "id": "2jwlw7cbb",
+          "text": "Vijay Dinanath Chauhan ... poora naam",
+          "type": "TEXT",
+          "answer": "Vijay Chauhan/Amitabh Bachchan in Agneepath",
+          "points": 10
+        },
+        {
+          "id": "xpq3t39se",
+          "text": "That's one small step for man, one giant leap for mankind.",
+          "type": "TEXT",
+          "answer": "Neil Armstrong",
+          "points": 10
+        },
+        {
+          "id": "330nnrjrw",
+          "text": "\"Eureka, Eureka!\"",
+          "type": "TEXT",
+          "answer": "Archimedes",
+          "points": 10
+        },
+        {
+          "id": "w9bg5m2ee",
+          "text": "\"Now I am become Death, the destroyer of worlds.\"",
+          "type": "TEXT",
+          "answer": "J. Robert Oppenheimer",
+          "points": 10
+        },
+        {
+          "id": "ulo6rz8lc",
+          "text": "ये नया भारत है, ये किसी की परमाणु धमकियों से नहीं डरता। ये नया भारत है, घर में घुसकर मारता है।",
+          "type": "TEXT",
+          "answer": "Narendra Modi on operation sindoor.",
+          "points": 10
+        },
+        {
+          "id": "xs2ibne7o",
+          "text": "\"Ye sab doglapan hai\"",
+          "type": "TEXT",
+          "answer": "Ashneer Grover",
+          "points": 10
+        },
+        {
+          "id": "q8eaytqfs",
+          "text": "\"Come on ______________, Don't be so middle class!\"",
+          "type": "TEXT",
+          "answer": "Maya Sarabhai/Ratna Pathak Shah on Sarabhai vs Sarabhai",
+          "points": 10
+        }
+      ],
+      "rules": "Format: Buzzer Round.\n\nThe Task: Read the text and identify the Movie or the Actor or the Person who said it.\n\nScoring:\n\n+10 Points: Correct Identification.\n\n-5 Points: Incorrect.\n\nPass: Yes, passes to the next team if the buzzer answer is wrong (Next team gets chance to buzz, no negative on pass).",
+      "coverImageUrl": "/uploads/dialogues-1769157070395-539961189.webp"
+    },
+    {
+      "id": "9m40kqkj1",
+      "title": "Do Jism Ek Jaan",
+      "type": "LINEAR",
+      "order": 6,
+      "questions": [
+        {
+          "id": "21wshyr7a",
+          "text": "Connect",
+          "type": "CONNECT",
+          "answer": "Colours / Indian Flag",
+          "points": 10,
+          "connectItems": [
+            "Orange",
+            "Green",
+            "Blue",
+            "White"
+          ]
+        },
+        {
+          "id": "mttfgeiid",
+          "text": "Connect",
+          "type": "CONNECT",
+          "answer": "Mythical Creatures /  Harry Potter ",
+          "points": 10,
+          "connectItems": [
+            "Phoenix",
+            "Unicorn",
+            "Dragon"
+          ]
+        },
+        {
+          "id": "u48nrejty",
+          "text": "Connect",
+          "type": "CONNECT",
+          "answer": "South Indian Restaurants / FC Road",
+          "points": 10,
+          "connectItems": [
+            "Vaishali",
+            "Roopali",
+            "Wadeshwar"
+          ]
+        },
+        {
+          "id": "svfnwzs3z",
+          "text": "Connect",
+          "type": "CONNECT",
+          "answer": "Chocolates / Space",
+          "points": 10,
+          "notes": "",
+          "connectItems": [
+            "Milky Way",
+            "Mars",
+            "Galaxy"
+          ]
+        },
+        {
+          "id": "3mtl10apg",
+          "text": "Connect",
+          "type": "CONNECT",
+          "answer": "Currency notes / Numbers",
+          "points": 10,
+          "connectItems": [
+            "500",
+            "200",
+            "100"
+          ]
+        },
+        {
+          "id": "8eohf8ajb",
+          "text": "Connect",
+          "type": "CONNECT",
+          "answer": "Traffic lights / Colours",
+          "points": 10,
+          "connectItems": [
+            "Red",
+            "Yellow",
+            "Green"
+          ]
+        },
+        {
+          "id": "6e1y36vos",
+          "text": "Connect",
+          "type": "CONNECT",
+          "answer": "Medals / Metals",
+          "points": 10,
+          "connectItems": [
+            "Gold ",
+            "Silver",
+            "Bronze"
+          ]
+        },
+        {
+          "id": "114vu48nv",
+          "text": "Connect",
+          "type": "CONNECT",
+          "answer": "Chess / Royalty (medieval) titles.",
+          "points": 10,
+          "connectItems": [
+            "King",
+            "Queen",
+            "Knight"
+          ]
+        }
+      ],
+      "rules": "Format: Split Team. Partners must sit separately and cannot communicate.\n\nThe Task: Identify the connection between the images/words shown.\n\nThe Twist: Both partners must write the SAME connection.\n\nScoring:\n\n+10 Points: If answers MATCH and are CORRECT.\n\n0 Points: If answers MISMATCH (even if one partner is correct!).\n\n-10 Points: If both are WRONG.",
+      "coverImageUrl": "/uploads/telepathy-1769156313780-42158853.png"
+    },
+    {
+      "id": "la94xyn8k",
+      "title": "Ad-Venture",
+      "type": "LINEAR",
+      "order": 7,
+      "questions": [
+        {
+          "id": "84l0j8s69",
+          "text": "Identify the company from the tune.",
+          "type": "AUDIO",
+          "answer": "Hutch / Vodafone - You and I.",
+          "points": 10,
+          "mediaUrl": "/uploads/youandi-1769153776698-95128968.mp3"
+        },
+        {
+          "id": "94mug7jle",
+          "text": "Identify the person who is featured in this ad.",
+          "type": "IMAGE",
+          "answer": "Ramalingam Raju - Satyam",
+          "points": 10,
+          "mediaUrl": "/uploads/amul1-1769153842768-95252668.webp"
+        },
+        {
+          "id": "tmet4ykoh",
+          "text": "Identify the product",
+          "type": "AUDIO",
+          "answer": "Pepsi - Oye Bubbly.",
+          "points": 10,
+          "mediaUrl": "/uploads/bubblypepsiad-1769153884311-52495486.mp3"
+        },
+        {
+          "id": "dl698b1qr",
+          "text": "This ad refers to what ?",
+          "type": "IMAGE",
+          "answer": "Sachin - reaching 100 centuries in international cricket.",
+          "points": 10,
+          "mediaUrl": "/uploads/amul8-1769154505336-187663433.webp"
+        },
+        {
+          "id": "pwq7f5k9a",
+          "text": "Identify the company",
+          "type": "AUDIO",
+          "answer": "Doordarshan (Old tune)",
+          "points": 10,
+          "mediaUrl": "/uploads/doordarshanoldtune-1769154140192-373361929.mp3"
+        },
+        {
+          "id": "coj8jcipe",
+          "text": "This ad refers to what ?",
+          "type": "IMAGE",
+          "answer": "\"yeh hamari pawri ho rahi hai\" meme/trend",
+          "points": 10,
+          "mediaUrl": "/uploads/amul7-1769154449732-74037256.png"
+        },
+        {
+          "id": "x9hea7m5c",
+          "text": "Identify the company/product",
+          "type": "AUDIO",
+          "answer": "Nerolac paints",
+          "points": 10,
+          "mediaUrl": "/uploads/nerolac-1769153961495-81374407.mp3"
+        },
+        {
+          "id": "t77pbjxwq",
+          "text": "This ad refers to what ?",
+          "type": "IMAGE",
+          "answer": "Chandrayaan 2 (vikram) failed soft landing",
+          "points": 10,
+          "mediaUrl": "/uploads/amul6-1769154427632-852488577.avif"
+        },
+        {
+          "id": "yfhqgohdy",
+          "text": "Identify the company",
+          "type": "AUDIO",
+          "answer": "Reliance Mobile (Communications)",
+          "points": 10,
+          "mediaUrl": "/uploads/reliance-1769153939399-629914176.mp3"
+        },
+        {
+          "id": "mhs2sclkd",
+          "text": "This ad refers to what ?",
+          "type": "IMAGE",
+          "answer": "Arrival of first Rafale jets",
+          "points": 10,
+          "mediaUrl": "/uploads/amul5-1769154337027-299813567.avif"
+        },
+        {
+          "id": "78v55c0rb",
+          "text": "Identify the company/product",
+          "type": "AUDIO",
+          "answer": "Action - School time shoes",
+          "points": 10,
+          "mediaUrl": "/uploads/actionschooltime-1769154021018-176517200.mp3"
+        },
+        {
+          "id": "yw9h9ycvs",
+          "text": "This ad refers to what ?",
+          "type": "IMAGE",
+          "answer": "PUBG and chinese apps ban",
+          "points": 10,
+          "mediaUrl": "/uploads/amul4-1769154303084-907228379.avif"
+        },
+        {
+          "id": "h9puifzr2",
+          "text": "Identify the company/product",
+          "type": "AUDIO",
+          "answer": "Nirma beauty soap / Soundarya Sabun Nirma",
+          "points": 10,
+          "mediaUrl": "/uploads/soundaryanirma-1769154047246-116612213.mp3"
+        },
+        {
+          "id": "x74kk3djd",
+          "text": "This ad refers to what ?",
+          "type": "IMAGE",
+          "answer": "Trump - Musk DOGE formation.",
+          "points": 10,
+          "mediaUrl": "/uploads/amul3-1769154263433-844048254.webp"
+        },
+        {
+          "id": "vjv01w66o",
+          "text": "Identify the company/product",
+          "type": "AUDIO",
+          "answer": "Nescafe Coffee",
+          "points": 10,
+          "mediaUrl": "/uploads/nescafe-1769154079699-223512654.mp3"
+        },
+        {
+          "id": "uldfdpqe8",
+          "text": "This ad refers to what ?",
+          "type": "IMAGE",
+          "answer": "2011 World Cup Win",
+          "points": 10,
+          "mediaUrl": "/uploads/amul2-1769154227238-52450705.webp"
+        },
+        {
+          "id": "iufbp2k40",
+          "text": "Identify the company/product",
+          "type": "AUDIO",
+          "answer": "Ponds Cold Cream",
+          "points": 10,
+          "mediaUrl": "/uploads/pondscoldcream-1769154105555-929929947.mp3"
+        },
+        {
+          "id": "4f4pp8d96",
+          "text": "Identify the company/product",
+          "type": "AUDIO",
+          "answer": "Lifebuoy soap",
+          "points": 10,
+          "mediaUrl": "/uploads/lifebuoy-1769154119551-424389807.mp3"
+        },
+        {
+          "id": "etxony4q4",
+          "text": "Identify the company",
+          "type": "AUDIO",
+          "answer": "Docomo",
+          "points": 10,
+          "mediaUrl": "/uploads/docomo-1769153916648-708526686.mp3"
+        },
+        {
+          "id": "8iblvr00z",
+          "text": "Identify the company",
+          "type": "AUDIO",
+          "answer": "All India Radio",
+          "points": 10,
+          "mediaUrl": "/uploads/allindiaradio-1769154168671-230073457.mp3"
+        }
+      ],
+      "rules": "Format: Buzzer Round. Deep dive into Amul Topicals and famous Jingles.\n\nThe Goal: Identify the Real-Life Event (for Amul ads) or the Brand (for Jingles).\n\nScoring:\n\n+10 Points: For a correct answer.\n\n-5 Points: For a wrong answer.\n\nPass Rule: If the first buzzer is wrong, the question passes to the next team (No negative on pass).",
+      "coverImageUrl": "/uploads/ads-1769156414828-759068148.jpg"
+    }
+  ],
+  "coverImageUrl": "/uploads/quizcover-1769157401303-337016357.jpg",
+  "coverImageOpacity": 0.24,
+  "intermissionMessage": "Let us check the scores !!"
+}
