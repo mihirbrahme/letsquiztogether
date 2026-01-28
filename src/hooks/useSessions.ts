@@ -62,9 +62,9 @@ export function useSessions() {
     };
 
     const endSession = async (sessionId: string) => {
-        const next = sessions.map((s) => (
+        const next: Session[] = sessions.map((s) => (
             s.id === sessionId
-                ? { ...s, status: 'ended', endedAt: new Date().toISOString() }
+                ? { ...s, status: 'ended' as const, endedAt: new Date().toISOString() }
                 : s
         ));
         await persist(next);
