@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { useSessions } from '../../hooks/useSessions';
 import { useQuizzes } from '../../hooks/useQuizzes';
