@@ -14,18 +14,22 @@ export const QuizEditor = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const { quizzes, updateQuiz, loading, lastSavedAt, saving } = useQuizzes();
-    const [quiz, setQuiz] = useState(() => quizzes.find(q => q.id === id));
+    // Derive quiz directly from quizzes to avoid the render-gap where
+    // loading=false but the useEffect to sync quiz hasn't fired yet.
+    const derivedQuiz = quizzes.find(q => q.id === id);
+    const [localQuiz, setLocalQuiz] = useState<typeof derivedQuiz>(undefined);
+    const quiz = localQuiz ?? derivedQuiz;
     const [isEditingSettings, setIsEditingSettings] = useState(false);
     const [isDirty, setIsDirty] = useState(false);
     const fileInputRef = React.useRef<HTMLInputElement | null>(null);
 
+    // Sync local edits back when server data updates (e.g. after save completes)
     useEffect(() => {
-        const found = quizzes.find(q => q.id === id);
-        if (found) {
-            setQuiz(found);
+        if (derivedQuiz) {
+            setLocalQuiz(undefined);
             setIsDirty(false);
         }
-    }, [quizzes, id]);
+    }, [derivedQuiz]);
 
     useEffect(() => {
         const handleBeforeUnload = (event: BeforeUnloadEvent) => {
@@ -50,7 +54,7 @@ export const QuizEditor = () => {
             questions: []
         };
         const updatedQuiz = { ...quiz, rounds: [...quiz.rounds, newRound] };
-        setQuiz(updatedQuiz);
+        setLocalQuiz(updatedQuiz);
         await updateQuiz(updatedQuiz);
         setIsDirty(false);
     };
@@ -58,7 +62,7 @@ export const QuizEditor = () => {
     const updateQuizMeta = async (updates: Partial<typeof quiz>) => {
         setIsDirty(true);
         const updatedQuiz = { ...quiz, ...updates };
-        setQuiz(updatedQuiz);
+        setLocalQuiz(updatedQuiz);
         await updateQuiz(updatedQuiz);
         setIsDirty(false);
     };
@@ -70,7 +74,7 @@ export const QuizEditor = () => {
             order: index,
         }));
         const updatedQuiz = { ...quiz, rounds: updatedRounds };
-        setQuiz(updatedQuiz);
+        setLocalQuiz(updatedQuiz);
         await updateQuiz(updatedQuiz);
         setIsDirty(false);
     };
@@ -85,7 +89,7 @@ export const QuizEditor = () => {
             questions: round.questions.map(q => ({ ...q, id: generateId() })),
         };
         const updatedQuiz = { ...quiz, rounds: [...quiz.rounds, duplicated] };
-        setQuiz(updatedQuiz);
+        setLocalQuiz(updatedQuiz);
         await updateQuiz(updatedQuiz);
         setIsDirty(false);
     };
@@ -100,7 +104,7 @@ export const QuizEditor = () => {
         [reordered[index], reordered[targetIndex]] = [reordered[targetIndex], reordered[index]];
         const normalized = reordered.map((round, idx) => ({ ...round, order: idx }));
         const updatedQuiz = { ...quiz, rounds: normalized };
-        setQuiz(updatedQuiz);
+        setLocalQuiz(updatedQuiz);
         await updateQuiz(updatedQuiz);
         setIsDirty(false);
     };

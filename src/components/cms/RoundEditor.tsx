@@ -13,7 +13,11 @@ export const RoundEditor = () => {
     const { quizId, roundId } = useParams<{ quizId: string; roundId: string }>();
     const navigate = useNavigate();
     const { quizzes, updateQuiz, loading, library, lastSavedAt, saving } = useQuizzes();
-    const [quiz, setQuiz] = useState(quizzes.find(q => q.id === quizId));
+    // Derive quiz directly from quizzes to avoid the render-gap where
+    // loading=false but the useEffect to sync quiz hasn't fired yet.
+    const derivedQuiz = quizzes.find(q => q.id === quizId);
+    const [localQuiz, setLocalQuiz] = useState<typeof derivedQuiz>(undefined);
+    const quiz = localQuiz ?? derivedQuiz;
     const [librarySearch, setLibrarySearch] = useState('');
     const [uploadTarget, setUploadTarget] = useState<string | null>(null);
     const [connectUploadTarget, setConnectUploadTarget] = useState<{ questionId: string; index: number } | null>(null);
@@ -25,13 +29,13 @@ export const RoundEditor = () => {
     // Local state for the round to allow editing before saving? 
     // Or direct update? Direct update is easier for now.
 
+    // Sync local edits back when server data updates (e.g. after save completes)
     useEffect(() => {
-        const found = quizzes.find(q => q.id === quizId);
-        if (found) {
-            setQuiz(found);
+        if (derivedQuiz) {
+            setLocalQuiz(undefined);
             setIsDirty(false);
         }
-    }, [quizzes, quizId]);
+    }, [derivedQuiz]);
 
     useEffect(() => {
         const handleBeforeUnload = (event: BeforeUnloadEvent) => {
@@ -52,7 +56,7 @@ export const RoundEditor = () => {
         const newRounds = [...quiz.rounds];
         newRounds[roundIndex] = updatedRound;
         const newQuiz = { ...quiz, rounds: newRounds };
-        setQuiz(newQuiz);
+        setLocalQuiz(newQuiz);
         await updateQuiz(newQuiz);
         setIsDirty(false);
     };

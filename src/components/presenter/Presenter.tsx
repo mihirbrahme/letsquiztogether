@@ -25,7 +25,9 @@ export const Presenter = () => {
     const { quizzes, loading } = useQuizzes();
     const { sessions, refresh: refreshSessions } = useSessions();
 
-    const [quiz, setQuiz] = useState(quizzes.find(q => q.id === quizId));
+    // Derive quiz directly from quizzes to avoid the render-gap where
+    // loading=false but the useEffect to sync quiz hasn't fired yet.
+    const quiz = quizzes.find(q => q.id === quizId) ?? null;
     const [showHelp, setShowHelp] = useState(false);
     const [showNotes, setShowNotes] = useState(false);
     const [showJump, setShowJump] = useState(false);
@@ -46,15 +48,6 @@ export const Presenter = () => {
     const [state, setState] = useState<PresenterState>(initialState);
     const historyRef = React.useRef<PresenterState[]>([initialState]);
     const historyIndexRef = React.useRef(0);
-
-    useEffect(() => {
-        if (quizId) {
-            const found = quizzes.find(q => q.id === quizId);
-            if (found) {
-                setQuiz(found);
-            }
-        }
-    }, [quizzes, quizId]);
 
     const currentRound = quiz && state.currentRoundIdx >= 0 ? quiz.rounds[state.currentRoundIdx] : null;
     const currentQuestion = useMemo(() => {
