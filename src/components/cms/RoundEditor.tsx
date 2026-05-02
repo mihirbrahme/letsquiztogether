@@ -26,8 +26,9 @@ export const RoundEditor = () => {
     // Or direct update? Direct update is easier for now.
 
     useEffect(() => {
-        if (quizzes.length > 0) {
-            setQuiz(quizzes.find(q => q.id === quizId));
+        const found = quizzes.find(q => q.id === quizId);
+        if (found) {
+            setQuiz(found);
             setIsDirty(false);
         }
     }, [quizzes, quizId]);

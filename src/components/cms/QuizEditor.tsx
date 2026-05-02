@@ -14,14 +14,15 @@ export const QuizEditor = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const { quizzes, updateQuiz, loading, lastSavedAt, saving } = useQuizzes();
-    const [quiz, setQuiz] = useState(quizzes.find(q => q.id === id));
+    const [quiz, setQuiz] = useState(() => quizzes.find(q => q.id === id));
     const [isEditingSettings, setIsEditingSettings] = useState(false);
     const [isDirty, setIsDirty] = useState(false);
     const fileInputRef = React.useRef<HTMLInputElement | null>(null);
 
     useEffect(() => {
-        if (quizzes.length > 0) {
-            setQuiz(quizzes.find(q => q.id === id));
+        const found = quizzes.find(q => q.id === id);
+        if (found) {
+            setQuiz(found);
             setIsDirty(false);
         }
     }, [quizzes, id]);

@@ -48,8 +48,11 @@ export const Presenter = () => {
     const historyIndexRef = React.useRef(0);
 
     useEffect(() => {
-        if (quizzes.length > 0 && quizId) {
-            setQuiz(quizzes.find(q => q.id === quizId));
+        if (quizId) {
+            const found = quizzes.find(q => q.id === quizId);
+            if (found) {
+                setQuiz(found);
+            }
         }
     }, [quizzes, quizId]);
 
